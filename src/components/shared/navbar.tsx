@@ -1,15 +1,16 @@
+import Link from "next/link";
 import React from "react";
 import { BiMenu } from "react-icons/bi";
 import { FaChevronDown, FaHamburger } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <div className="header z-50 text-white fixed w-full ">
-      <div className="top-header w-full relative p-2 max-md:hidden">
+    <div className=" z-50 text-white fixed w-full ">
+      <div className=" w-full relative p-2 max-md:hidden">
         <div className="container max-w-7xl mx-auto px-4  ">
           <div className="flex justify-between w-full">
-            <div className="top-header-left gap-6 flex">
-              <div className="top-contact-info">
+            <div className=" gap-6 flex">
+              <div className="">
                 <ul className="flex gap-5">
                   <li>
                     <a className="flex gap-3" href="tel:+21234567897">
@@ -62,7 +63,7 @@ const Navbar = () => {
                 </ul>
               </div>
 
-              <div className="top-social flex gap-4">
+              <div className=" flex gap-4">
                 <a href="/">
                   <svg
                     aria-hidden="true"
@@ -135,7 +136,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="col-md-5">
-              <div className="top-header-right bg-none flex items-center gap-1">
+              <div className=" bg-none flex items-center gap-1">
                 <div className="lang">
                   <select name="lang" className="select bg-transparent">
                     <option className="option" value={1}>
@@ -158,8 +159,8 @@ const Navbar = () => {
                     </option>
                   </select>
                 </div>
-                <div className="currency">
-                  <select name="currency" className="select bg-transparent">
+                <div >
+                  <select name="currency" className=" bg-transparent">
                     <option value={1}>USD</option>
                     <option value={2}>EUR</option>
                     <option value={3}>AUD</option>
@@ -197,10 +198,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="main-navigation   ">
+      <div className="   ">
         <nav className="">
           <div className="container max-w-7xl mx-auto px-4 flex items-center justify-between">
-            <a className="navbar-brand " href="/">
+            <a className="" href="/">
               <img
                 src="https://travelox.vercel.app/img/logo/logo.png"
                 className="logo-display w-[200px] h-full"
@@ -213,29 +214,26 @@ const Navbar = () => {
             </button>
 
             <div className=" max-md:hidden flex   " id="main_nav">
-              <ul className="navbar-nav ms-auto gap-5 flex items-center mr-5 ">
+              <ul className=" ms-auto gap-5 flex items-center mr-5 ">
                 <NavItem name="Home" />
                 <NavItem name="Destination" />
                 <NavItem name="Tours" />
                 <NavItem name="Pages" />
                 <NavItem name="Blogs" />
-                <li className="nav-item dropdown xl:text-[18px] text-[14px] flex items-center gap-2  uppercase ">
+                <li className="  text-[14px] flex items-center gap-2  uppercase ">
                   <div
-                    className="nav-link dropdown-toggle "
+                    className=" "
                     data-bs-toggle="dropdown"
                   >
                     CONTACT
                   </div>
                 </li>
               </ul>
-              <div className="header-btn max-lg:hidden">
-                <a className="theme-btn" href="/#">
+              <div className=" max-lg:hidden">
+                <Link className="theme-btn flex items-center hover:opacity-80" href="/#">
                   BOOK NOW{" "}
                   <svg
                     aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="arrow-right"
                     className="size-5 "
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
@@ -246,7 +244,7 @@ const Navbar = () => {
                       d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -260,8 +258,8 @@ export default Navbar;
 
 const NavItem = ({ name }: { name: string }) => {
   return (
-    <li className="nav-item dropdown xl:text-[18px] text-[14px] flex items-center gap-2  uppercase ">
-      <div className="nav-link dropdown-toggle " data-bs-toggle="dropdown">
+    <li className=" cursor-pointer dropdown  text-[14px] flex items-center gap-2  uppercase ">
+      <div className=" ">
         {name}
       </div>
       <FaChevronDown />
